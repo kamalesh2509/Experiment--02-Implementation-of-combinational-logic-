@@ -14,8 +14,16 @@ F2=xy’z+x’y’z+w’xy+wx’y+wxy
 
 
 ## Theory
- 
+ Logic gates are electronic circuits which perform logical functions on one or more inputs to produce one output.
 
+# Using NAND gates
+NAND gate is actually a combination of two logic gates i.e. AND gate followed by NOT gate. So its output is complement of the output of an AND gate.This gate can have minimum two inputs, output is always one. By using only NAND gates, we can realize all logic functions: AND, OR, NOT, X-OR, X-NOR, NOR. So this gate is also called as universal gate. First note that the entire expression is inverted and we have three terms ANDed. This means that we must use a 3-input NAND gate. Each of the three terms is, itself, a NAND expression. Finally, negated single terms can be generates with a 2-input NAND gate acting as an inverted.
+
+F=((C'.B.A)'(D'.C.A)'(C.B'.A)')'
+## Logic Diagram
+Using NOR gates NOR gate is actually a combination of two logic gates: OR gate followed by NOT gate. So its output is complement of the output of an OR gate. This gate can have minimum two inputs, output is always one. By using only NOR gates, we can realize all logic functions: AND, OR, NOT, Ex-OR, Ex-NOR, NAND. So this gate is also called universal gate. Designing a circuit with NOR gates only uses the same basic techniques as designing a circuit with NAND gates; that is, the application of deMorgan’s theorem. The only difference between NOR gate design and NAND gate design is that the former must eliminate product terms and the later must eliminate sum terms.
+
+F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')'
 ## Logic Diagram
 ## Procedure
 ## Program:
@@ -70,7 +78,8 @@ NOR:
 NAND:
 ![230769530-0b13b1d2-6b8c-48c1-a0c5-5c4b6d65a795](https://github.com/kamalesh2509/Experiment--02-Implementation-of-combinational-logic-/assets/120444689/9a0df440-d193-4ca4-ab5f-253cd42c32e1)
 NOR:
-![Uploading 230769540-cb5375ff-4941-43f7-be27-9fb60767ce8d.png…]()
+![230769540-cb5375ff-4941-43f7-be27-9fb60767ce8d](https://github.com/kamalesh2509/Experiment--02-Implementation-of-combinational-logic-/assets/120444689/6c3e4cbf-caa6-4d6a-acf9-988d31c473f9)
+
 
 ## Result:
 Thus the given logic functions are implemented using  and their operations are verified using Verilog programming.
